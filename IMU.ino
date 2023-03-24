@@ -82,18 +82,19 @@ Ym = mag.y() * cos(pitch_angle_radians) + mag.z() * sin(pitch_angle_radians);
 heading = atan2(Ym, Xm) / (2 * 3.14) * 360;
 
 // Print the roll angle, pitch angle, heading, and calibration data
+Serial.print("Roll angle: ");
 Serial.print(roll_angle);
-Serial.print(",");
+Serial.print(" degrees, Pitch angle: ");
 Serial.print(pitch_angle);
-Serial.print(",");
+Serial.print(" degrees, Heading: ");
 Serial.print(heading);
-Serial.print(",");
+Serial.print(" degrees, Accelerometer calibration: ");
 Serial.print(accel);
-Serial.print(",");
+Serial.print(", Gyroscope calibration: ");
 Serial.print(gyro);
-Serial.print(",");
+Serial.print(", Magnetometer calibration: ");
 Serial.print(mg);
-Serial.print(",");
+Serial.print(", System calibration: ");
 Serial.println(system);
 
 // Update the filtered roll and pitch angles
